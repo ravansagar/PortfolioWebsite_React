@@ -1,0 +1,91 @@
+.app-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 96.5vw;
+  min-height: 100vh;
+  max-height: 100vh;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 3em;
+  color: #3498db;
+  border-radius: 8px;
+  text-align: justify;
+  padding: 20px;
+  margin-left: -18vw;
+  position: relative;
+}
+
+.app-container .text {
+  background: rgb(255, 47, 47);
+  background: linear-gradient(90deg, rgba(255, 47, 47, 1) 35%, rgba(47, 255, 47, 1) 45%, rgba(0, 242, 255, 1) 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  padding-top: 15vh;
+}
+
+.typewriter-effect {
+  white-space: pre-wrap;
+}
+
+.app-container .imgContainer {
+  height: 90vh;
+  width: 40vw;
+  position: absolute;
+  margin: 0.2em -25.5em 1em 1em;
+  border-radius: 50px;
+}
+
+.app-container .imgContainer img {
+  height: 98%;
+  width: 98%;
+  border-radius: 50px;
+  padding: 5px;
+}
+
+
+.app-container .imgContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  border: 5px solid transparent;
+  box-sizing: border-box;
+  background: linear-gradient(45deg, #ff6a00, #ee0979, #00c6ff, #f4791f);
+  background-size: 400% 400%;
+  z-index: -1;
+  animation: gradientRotate 6s linear infinite;
+}
+
+@keyframes gradientRotate {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.finished {
+  height: 35vh;
+  width: 40vw;
+  position: absolute;
+  padding-top: 0.5em;
+  font-size: 0.6em;
+  color: #3498db;
+}
+
+.app-container .download {
+  position: absolute;
+  margin-top: 70vh;
+  margin-right: 10vw;
+  color: #ffffff92;
+}

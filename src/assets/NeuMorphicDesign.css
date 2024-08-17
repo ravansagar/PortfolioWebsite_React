@@ -1,0 +1,88 @@
+/* General styling for the dropdown container */
+.neumorph-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Styling for the dropdown toggle button */
+  .neumorph-dropdown-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 12px;
+    background: #e0e0e0; /* Light background */
+    box-shadow: 6px 6px 12px #b0b0b0, -6px -6px 12px #ffffff, inset 2px 2px 4px #ffffff, inset -2px -2px 4px #b0b0b0; /* Neumorphic outer and inset shadows */
+    transition: background-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .neumorph-dropdown-toggle:hover {
+    background: #d0d0d0; /* Slightly darker on hover */
+    box-shadow: 4px 4px 8px #b0b0b0, -4px -4px 8px #ffffff, inset 2px 2px 4px #ffffff, inset -2px -2px 4px #b0b0b0;
+  }
+  
+  /* Styling for the dropdown content */
+  .neumorph-dropdown-content {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #e0e0e0; /* Light background */
+    border-radius: 12px;
+    box-shadow: 6px 6px 12px #b0b0b0, -6px -6px 12px #ffffff, inset 2px 2px 4px #ffffff, inset -2px -2px 4px #b0b0b0; /* Neumorphic outer and inset shadows */
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+  }
+  
+  /* Styling for each dropdown item */
+  .neumorph-dropdown-item {
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+    color: #333; /* Dark text for light background */
+  }
+  
+  .neumorph-dropdown-item:hover {
+    background-color: #d0d0d0; /* Slightly darker background on hover */
+  }
+  
+  /* Dark theme adjustments for neumorphic design */
+  [data-theme='dark'] .neumorph-dropdown-toggle,
+  [data-theme='dark'] .neumorph-dropdown-content {
+    background: #2e2e2e; 
+    box-shadow: 6px 6px 12px #1a1a1a, -6px -6px 12px #3a3a3a, inset 2px 2px 4px #1a1a1a, inset -2px -2px 4px #3a3a3a; /* Dark neumorphic shadows */
+  }
+  
+  [data-theme='dark'] .neumorph-dropdown-item {
+    color: #ccc; /* Light text for dark background */
+  }
+  
+  [data-theme='dark'] .neumorph-dropdown-item:hover {
+    background-color: #3a3a3a; /* Darker hover effect */
+  }
+  
+  /* Active icon styling for light mode */
+  [data-theme='light'] .active-icon {
+    color: #ffcc00; /* Yellowish for active icon in light mode */
+  }
+  
+  /* Active icon styling for dark mode */
+  [data-theme='dark'] .active-icon {
+    color: #000; /* Black for active icon in dark mode */
+  }
+  
+  /* Conditional active icon color based on system theme */
+  [data-theme='system'] .active-icon-light,
+  [data-theme='light'] .active-icon-light {
+    color: #ffcc00; /* Yellowish for light theme */
+  }
+  
+  [data-theme='system'] .active-icon-dark,
+  [data-theme='dark'] .active-icon-dark {
+    color: #fff; /* Black for dark theme */
+  }
+  
