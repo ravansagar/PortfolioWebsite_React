@@ -65,7 +65,7 @@ const projects = [
   const ProjectPage = () => {
     const [selectedProject, setSelectedProject] = useState(null);
 
-    const handleProjectClick = (project) => {
+    const handleProjectClick = (project : JSON) => {
         setSelectedProject(project);
     };
 
