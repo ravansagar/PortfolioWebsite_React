@@ -65,7 +65,7 @@ const projects = [
   const ProjectPage = () => {
     const [selectedProject, setSelectedProject] = useState(null);
 
-    const handleProjectClick = (project : JSON) => {
+    const handleProjectClick = (project : any) => {
         setSelectedProject(project);
     };
 
@@ -80,13 +80,13 @@ const projects = [
             >
                 {selectedProject && (
                     <div className="overlay">
-                        <h1>{selectedProject.description}</h1>
+                        <h1>{selectedProject?.description}</h1>
                         <div className="buttons-style">
                         <Buttons
                   variant="outlined"
                   startIcon={<VisibilityOutlined />}
                   onClick={() => window.open(selectedProject.links[0], '_blank')}
-                  disabled= {selectedProject.index === 2 || selectedProject.index === 4 ||  selectedProject.index === 5}
+                  disabled= {selectedProject?.index === 2 || selectedProject.index === 4 ||  selectedProject.index === 5}
                 >
                   Live Preview
                 </Buttons>
@@ -108,7 +108,7 @@ const projects = [
                 {projects.map(project => (
                     
                     <div
-                        key={project.id}
+                        key={project?.id}
                         className={`project-item ${selectedProject === project ? 'selected' : ''}`}
                         onClick={() => handleProjectClick(project)}
                     >
