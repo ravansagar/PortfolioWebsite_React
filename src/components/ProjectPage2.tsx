@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './ProjectPage.css';
 import Header from '@/components/NavBar';
 import { VisibilityOutlined } from '@mui/icons-material';
@@ -72,7 +72,7 @@ const projects = [
     return (
         <div className="project-container"
         style={{ 
-            backgroundImage: selectedProject ? `url(${selectedProject.image})` : 'none',
+            backgroundImage: selectedProject ? `url(${selectedProject?.image})` : 'none',
             backgroundSize: 'cover',
         }}>
             <div

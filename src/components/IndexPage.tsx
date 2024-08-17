@@ -199,7 +199,6 @@ const App = () => {
                 loop: true,
                 delay: 150,
                 deleteSpeed: 50,
-                pauseFor: 2000,
               }}
             />
           </div>
